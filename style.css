@@ -7,7 +7,7 @@
 
 body {
   font-family: Arial, sans-serif;
-  background: #f8f9fa;
+  background-image: url("./imgs/sfondo.png");
   color: #333;
   line-height: 1.5;
   padding: 1rem;
