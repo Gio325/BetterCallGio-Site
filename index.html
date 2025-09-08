@@ -20,8 +20,8 @@
         <ul class="navbar-nav">
           <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="#Servizi">Servizi</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Chi sono</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Contatti</a></li>
+          <li class="nav-item"><a class="nav-link" href="#ChiSono">Chi sono</a></li>
+          <li class="nav-item"><a class="nav-link" href="#Contatti">Contatti</a></li>
         </ul>
       </div>
     </div>
@@ -42,7 +42,7 @@
   <div class="container">
     <div class="card shadow-lg p-3" 
          style="background-color: rgba(255,255,255,0.8); border: 2px solid #ffc107; border-radius: 15px;">
-      <h2 class="mb-3 text-center">Chi sono</h2>
+      <h2 class="mb-3 text-center"><strong>Chi sono</strong></h2>
       <p class="text-start">Appassionato di tecnologia e hardware fin da giovane, ho trasformato questa passione in un’attività professionale.</p>
       <p class="text-start">Offro consulenza tecnica personalizzata per privati e piccole aziende, con un approccio pratico e orientato ai risultati.</p>
       <p class="text-start">Assistenza completa su smartphone, tablet, notebook e desktop, dalla scelta del prodotto alla risoluzione di problemi come virus o perdita dati.</p>
@@ -84,7 +84,60 @@
           </div>
         </div>
       </div>
-    </section> <!-- Alert Bootstrap nascosto --> <!-- Alert Bootstrap centrato -->
+    </section>
+    
+    <section id="Contatti" class="py-2" style="max-width: 800px; margin: 0 auto;">
+  <div class="container">
+    <div class="card shadow-lg p-3"
+         style="color: white; background-color: rgba(0, 0, 0, 0.54); border: 2px solid #ffc107; border-radius: 15px;">
+      <h2 class="mb-3 text-center">Contatti</h2>
+      <p class="text-start"><strong>Telefono:</strong> <a href="tel:+391234567890">+39 123 456 7890</a></p>
+      <p class="text-start"><strong>Email:</strong> <a href="mailto:giosu.gygo@gmail.com">giosu.gygo@gmail.com</a></p>
+      <p class="text-start">Puoi contattarmi per qualsiasi consulenza, richiesta di assistenza o preventivo .</p>
+      <div class="text-center mt-3">
+        <a href="tel:+391234567890" class="btn btn-outline-warning me-2">Chiama Ora</a>
+        <a href="mailto:giosu.gygo@gmail.com" class="btn btn-outline-warning">Invia Email</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<footer class="py-1 mt-4" style="background-color:#ffc107; border-top: 2px solid #ffc107;">
+  <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+
+    
+    <!-- Pulsante torna su -->
+   <div style="margin: 0.2rem;">
+      <button id="scrollTopBtn" 
+              style="background-color: #ffffff62; color: #222; border: none; padding: 0.4rem 1rem; border-radius: 25px; font-weight: bold; transition: all 0.3s; cursor: pointer;">
+        Torna su
+      </button>
+    </div>
+    <!-- Logo -->
+    <div>
+      <img src="./imgs/site logo.png" alt="Logo" style="height: 50px; display: block; margin: 0 auto;">
+    </div>
+
+    <!-- Testo diritti riservati -->
+    <div style="font-size: 0.5rem; margin-top: 0.3rem;">
+      &copy; 2025 Better Call Gio. Tutti i diritti riservati.
+    </div>
+
+
+  </div>
+</footer>
+
+<script>
+  // Scroll verso l'inizio della pagina
+  document.getElementById('scrollTopBtn').addEventListener('click', function() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+</script>
+
+
+
+    <!-- Alert Bootstrap nascosto --> <!-- Alert Bootstrap centrato -->
     <div id="promoAlert" class="alert alert-success alert-dismissible fade text-center" role="alert"
       style="position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 1050; max-width: 400px; width: 90%; padding: 2rem; font-size: 1.2rem;">
       <h4 class="alert-heading">Grazie per aver visitato il sito!</h4>
@@ -94,7 +147,7 @@
     </div> <!-- Bootstrap JS (bundle con Popper incluso) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Script per far apparire l'alert dopo 20 secondi -->
-    <script> setTimeout(function () { var alertElement = document.getElementById('promoAlert'); alertElement.classList.add('show'); }, 200); // 20 secondi </script>
+    <script> setTimeout(function () { var alertElement = document.getElementById('promoAlert'); alertElement.classList.add('show'); }, 20000); // 20 secondi </script>
 </body>
 
 </html>
