@@ -1,47 +1,80 @@
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Better Call Gio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-
-  <header>
-    <h1>Better Call Gio</h1>
-    <p>Assistenza PC e Smartphone</p>
-  </header>
-
-  <nav>
-    <a href="#">Home</a>
-    <a href="#">Servizi</a>
-    <a href="#">Chi sono</a>
-    <a href="#">Contatti</a>
+  <nav class="navbar navbar-expand-lg navbar-light bg-warning shadow-sm">
+    <div class="container"> <a class="navbar-brand d-flex align-items-center" href="#"> <img src="./imgs/site logo.png"
+          alt="Better Call Gio" class="me-2"> </a> <button class="navbar-toggler" type="button"
+        data-bs-toggle="collapse" data-bs-target="#navbarNav"> <span class="navbar-toggler-icon"></span> </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#Servizi">Servizi</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Chi sono</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Contatti</a></li>
+        </ul>
+      </div>
+    </div>
   </nav>
-
   <main>
-    <section>
-      <h2>🔧 Riparazioni veloci</h2>
-      <p>Riparo PC e smartphone con la massima cura e tempi rapidi.</p>
-    </section>
-
-    <section>
-      <h2>💾 Backup & Dati</h2>
-      <p>Trasferimento e salvataggio sicuro dei tuoi dati.</p>
-    </section>
-
-    <section>
-      <h2>🌐 Consulenza</h2>
-      <p>Ti aiuto a scegliere soluzioni informatiche adatte a te.</p>
-    </section>
-
-    <section>
-      <h2>📞 Contattami</h2>
-      <p>Problemi col PC? Better Call Gio!</p>
-      <button>Scrivimi su WhatsApp</button>
-    </section>
-  </main>
-
+    <div class="container my-4">
+      <div class="card card-bg text-center shadow-lg text-white">
+        <div class="card-body d-flex flex-column justify-content-center overlay">
+          <h2 class="card-title">Assistenza</h2>
+          <p class="card-text">Veloce. Sicura. Efficiente.</p> <button type="button"
+            class="btn btn-outline-warning mt-3">Scopri</button>
+        </div>
+      </div>
+    </div>
+    <section id="Servizi" class="py-2">
+      <div class="container ">
+        <div class="card text-center shadow-lg service-card" style="min-height: 300px;">
+          <div class="card-body d-flex flex-column ">
+            <h1 class="card-title"><strong>Servizi Offerti</strong></h3>
+              <div class="icons"> <img src="./imgs/shield.png" class="img-fluid w-25 mb-3" alt="">
+                <h4>Rimozione virus</h4>
+                <p class="card-text fs-6 fs-md-5">rimozione di malware e spyware per ripristinare sicurezza e
+                  prestazioni del computer.</p>
+              </div>
+              <div class="icons"> <img src="./imgs/cloud.png" class="img-fluid w-25 mb-3" alt="">
+                <h4>Backup & Data Recovery</h4>
+                <p class="card-text fs-6 fs-md-5">Creazione di backup completi e Recupero professionale di file persi o
+                  danneggiati, anche da dispositivi compromessi.</p>
+              </div>
+              <div class="icons"> <img src="./imgs/network.png" class="img-fluid w-25 mb-3" alt="">
+                <h4>Configurazione reti</h4>
+                <p class="card-text fs-6 fs-md-5">allestimento e manutenzione di reti domestiche e da ufficio,
+                  Risoluzione problemi di connessione e protezione da accessi indesiderati.</p>
+              </div>
+              <div class="icons"> <img src="./imgs/custom.png" class="img-fluid w-25 mb-3" alt="">
+                <h4>Configurazioni pc custom</h4>
+                <p class="card-text fs-6 fs-md-5">Assemblaggio di PC gaming e non su misura con componenti selezionati
+                  delle migliori marche per prestazioni elevate.</p>
+              </div>
+          </div>
+        </div>
+      </div>
+    </section> <!-- Alert Bootstrap nascosto --> <!-- Alert Bootstrap centrato -->
+    <div id="promoAlert" class="alert alert-success alert-dismissible fade text-center" role="alert"
+      style="position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 1050; max-width: 400px; width: 90%; padding: 2rem; font-size: 1.2rem;">
+      <h4 class="alert-heading">Grazie per aver visitato il sito!</h4>
+      <p>Solo per te, un <strong>15% di sconto</strong> chiamando ora.</p> <a href="tel:+391234567890"
+        class="btn btn-lg btn-warning mb-2">Chiama Ora</a> <button type="button" class="btn-close"
+        data-bs-dismiss="alert" aria-label="Close"></button>
+    </div> <!-- Bootstrap JS (bundle con Popper incluso) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Script per far apparire l'alert dopo 20 secondi -->
+    <script> setTimeout(function () { var alertElement = document.getElementById('promoAlert'); alertElement.classList.add('show'); }, 200); // 20 secondi </script>
 </body>
+
 </html>
